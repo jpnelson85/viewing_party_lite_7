@@ -25,36 +25,36 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Sat, 08 Jul 2023 20:23:21 GMT
+      - Mon, 17 Jul 2023 20:37:25 GMT
       Server:
       - openresty
       Cache-Control:
-      - public, max-age=22584
+      - public, max-age=24229
       X-Memc:
       - HIT
       X-Memc-Key:
       - a3dde13b574bdd203b706f79c6da42d3
       X-Memc-Age:
-      - '16515'
+      - '8331'
       X-Memc-Expires:
-      - '5673'
+      - '15891'
       Etag:
-      - W/"0957ffa2708c9495fd17437fb9076902"
+      - W/"cc277ffedacd6ed308ea5c260d9d7cb3"
       Vary:
       - Accept-Encoding
       - Origin
       X-Cache:
       - Hit from cloudfront
       Via:
-      - 1.1 40867fef594010a8d9ec2cb0a5cb2350.cloudfront.net (CloudFront)
+      - 1.1 51e6f466f192ce588105b138cebcc0d0.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
       - ORD58-P1
       Alt-Svc:
       - h3=":443"; ma=86400
       X-Amz-Cf-Id:
-      - jIqGTz5b23rIqgtAvR89lA0-J3CAuqI9Jq9eBr_7iOSTQ0c6Pzbgxw==
+      - 3vz5H-V2TcLbyL0hFXbUgLea0Wl1DY0kNGScb8zRhp36I2sQkRV2BQ==
       Age:
-      - '5732'
+      - '3487'
     body:
       encoding: ASCII-8BIT
       string: '{"adult":false,"backdrop_path":"/zqkmTXzjkAgXmEWLRsY4UpTWCeo.jpg","belongs_to_collection":{"id":10,"name":"Star
@@ -64,10 +64,10 @@ http_interactions:
         forces in their effort to take over the galactic Empire. Venturesome Luke
         Skywalker and dashing captain Han Solo team together with the loveable robot
         duo R2-D2 and C-3PO to rescue the beautiful princess and restore peace and
-        justice in the Empire.","popularity":79.873,"poster_path":"/6FfCtAuVAW8XJjZ7eWeLibRLWTw.jpg","production_companies":[{"id":1,"logo_path":"/o86DbpburjxrqAzEDhXZcyE8pDb.png","name":"Lucasfilm
+        justice in the Empire.","popularity":97.081,"poster_path":"/6FfCtAuVAW8XJjZ7eWeLibRLWTw.jpg","production_companies":[{"id":1,"logo_path":"/o86DbpburjxrqAzEDhXZcyE8pDb.png","name":"Lucasfilm
         Ltd.","origin_country":"US"},{"id":25,"logo_path":"/qZCc1lty5FzX30aOCVRBLzaVmcp.png","name":"20th
         Century Fox","origin_country":"US"}],"production_countries":[{"iso_3166_1":"US","name":"United
         States of America"}],"release_date":"1977-05-25","revenue":775398007,"runtime":121,"spoken_languages":[{"english_name":"English","iso_639_1":"en","name":"English"}],"status":"Released","tagline":"A
-        long time ago in a galaxy far, far away...","title":"Star Wars","video":false,"vote_average":8.203,"vote_count":18840}'
-  recorded_at: Sat, 08 Jul 2023 21:58:53 GMT
+        long time ago in a galaxy far, far away...","title":"Star Wars","video":false,"vote_average":8.204,"vote_count":18877}'
+  recorded_at: Mon, 17 Jul 2023 21:35:32 GMT
 recorded_with: VCR 6.2.0

@@ -13,8 +13,19 @@ class UsersController < ApplicationController
     if user.save
       redirect_to user_path(user)
     else
-      flash[:alert] = user.errors.full_messages.to_sentence
+      flash[:alert] = "User can not be created. Please try again."
 
+      redirect_to "/register"
+    end
+  end
+
+  def login
+    user = User.find_by(email: params[:email])
+    if user.authenticate(params[:password])
+      session[:user_id] = user.id
+      flash[:success] = "Welcome, #{user.user_name}!"
+    else
+      flash[:error] = "Credentials are bad. Please try again."
       redirect_to "/register"
     end
   end
@@ -22,6 +33,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.permit(:user_name, :email)
+    params.permit(:user_name, :email, :password, password_confirmation: :password)
   end
 end

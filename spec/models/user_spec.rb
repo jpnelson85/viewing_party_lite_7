@@ -10,14 +10,16 @@ RSpec.describe User, type: :model do
     it { should validate_presence_of(:user_name) }
     it { should validate_presence_of(:email) }
     it { should validate_uniqueness_of(:email) }
+    it { should validate_presence_of(:password_digest) }
+    it { should have_secure_password }
   end
 
   describe "instance methods" do
     describe "#invitees" do
       it "returns all users except self" do
-        user1 = User.create!(user_name: "Steve", email: "Steve@email.com")
-        user2 = User.create!(user_name: "Ben", email: "Ben@email.com")
-        user3 = User.create!(user_name: "Jane", email: "Jane@email.com")
+        user1 = User.create!(user_name: "Steve", email: "Steve@email.com", password: "password")
+        user2 = User.create!(user_name: "Ben", email: "Ben@email.com", password: "password")
+        user3 = User.create!(user_name: "Jane", email: "Jane@email.com", password: "password")
 
         expect(user1.invitees).to eq([user2, user3])
       end

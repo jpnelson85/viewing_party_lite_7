@@ -3,10 +3,10 @@ require "rails_helper"
 RSpec.describe "New Viewing Party Page", type: :feature do
   describe "new viewing party form" do
     it "displays a from to create a new viewing party", :vcr do
-      user1 = User.create!(user_name:"Callie", email:"Cal@email.com")
-      user2 = User.create!(user_name:"Steve", email:"Steve@email.com")
-      user3 = User.create!(user_name:"Joe", email:"Joe@email.com")
-      user4 = User.create!(user_name:"Jane", email:"Jane@email.com")
+      user1 = User.create!(user_name:"Callie", email:"Cal@email.com", password:"password")
+      user2 = User.create!(user_name:"Steve", email:"Steve@email.com", password:"password")
+      user3 = User.create!(user_name:"Joe", email:"Joe@email.com", password:"password")
+      user4 = User.create!(user_name:"Jane", email:"Jane@email.com", password:"password")
 
       movie = MovieFacade.new.find_movie(11)
       visit new_user_movie_viewing_party_path(user1, movie.id)
@@ -27,9 +27,9 @@ RSpec.describe "New Viewing Party Page", type: :feature do
     end
 
     it "allows me to fill out form and create a new VP then get redirected back to my user dashboard", :vcr do
-      user1 = User.create!(user_name:"Callie", email:"Cal@email.com")
-      user2 = User.create!(user_name:"Steve", email:"Steve@email.com")
-      user3 = User.create!(user_name:"Joe", email:"Joe@email.com")
+      user1 = User.create!(user_name:"Callie", email:"Cal@email.com", password:"password")
+      user2 = User.create!(user_name:"Steve", email:"Steve@email.com", password:"password")
+      user3 = User.create!(user_name:"Joe", email:"Joe@email.com", password:"password")
       movie = MovieFacade.new.find_movie(11)
       visit new_user_movie_viewing_party_path(user1, movie.id)
 
@@ -48,9 +48,9 @@ RSpec.describe "New Viewing Party Page", type: :feature do
     end
 
     it "displays flash message to fill out all fields", :vcr do
-      user1 = User.create!(user_name:"Callie", email:"Cal@email.com")
-      user2 = User.create!(user_name:"Steve", email:"Steve@email.com")
-      user3 = User.create!(user_name:"Joe", email:"Joe@email.com")
+      user1 = User.create!(user_name:"Callie", email:"Cal@email.com", password:"password")
+      user2 = User.create!(user_name:"Steve", email:"Steve@email.com", password:"password")
+      user3 = User.create!(user_name:"Joe", email:"Joe@email.com", password:"password")
       movie = MovieFacade.new.find_movie(11)
       visit new_user_movie_viewing_party_path(user1, movie.id)
 

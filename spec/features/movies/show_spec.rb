@@ -2,8 +2,8 @@ require 'rails_helper'
 
 RSpec.describe 'Movie Show Page' do
   before :each do
-    @user1 = User.create!(user_name: "Bob", email: "bob@gmail.com")
-    @user2 = User.create!(user_name: "Kate", email: "kate@gmail.com")
+    @user1 = User.create!(user_name: "Bob", email: "bob@gmail.com", password: "password")
+    @user2 = User.create!(user_name: "Kate", email: "kate@gmail.com", password: "password")
   end
   describe "top rated movies" do
     it 'redirects and displays movie title and vote average after clicking Find Top Rated Movies', :vcr do

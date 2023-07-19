@@ -3,7 +3,7 @@ require "rails_helper"
 RSpec.describe "Discover Movie Page", tupe: :feature do
   describe "top rated movies button" do
     it "displays a button that can take you to top rated movies", :vcr do
-      user_1 = User.create!(user_name: "Pal", email: "pal@email.com")
+      user_1 = User.create!(user_name: "Pal", email: "pal@email.com", password: "password")
 
       visit "/users/#{user_1.id}/discover"
       expect(page).to have_button("Find Top Rated Movies")
@@ -13,7 +13,7 @@ RSpec.describe "Discover Movie Page", tupe: :feature do
     end
 
     it "displays a search bar to find movies with a keyword", :vcr do
-      user_1 = User.create!(user_name: "Pal", email: "pal@email.com")
+      user_1 = User.create!(user_name: "Pal", email: "pal@email.com", password: "password")
 
       visit "/users/#{user_1.id}/discover"
       expect(page).to have_field("search")
