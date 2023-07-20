@@ -2,7 +2,8 @@
 <%= button_to "Create a New User", register_path, method: :get, local: true %>
 </section>
 
-<%= link_to "Log In", login_path %>
+<% if session[:user_id] %>
+  
 
 <ul>
   <h2>Existing Users</h2>
@@ -10,3 +11,6 @@
       <li><%= link_to user.email, user_path(user), method: :get, local: true %></li>
     <% end %>
 </ul>
+<% else %>
+  <p> Please log in to see existing users. </p>
+<% end %>
