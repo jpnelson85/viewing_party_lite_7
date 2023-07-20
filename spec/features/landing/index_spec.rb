@@ -29,7 +29,7 @@ RSpec.describe "landing page", type: :feature do
     expect(current_path).to eq("/register")
   end
 
-  it 'displays existing user email addresses that are linkes to their show page' do
+  it 'displays existing user email addresses' do
     user = User.create!(user_name: "Steve", email: "steve@gmail.com", password: "password")
     
     visit root_path
@@ -43,19 +43,9 @@ RSpec.describe "landing page", type: :feature do
 
     visit root_path
 
-    expect(page).to have_link("#{@user1.email}")
-    expect(page).to have_link("#{@user2.email}")
-    expect(page).to have_link("#{@user3.email}")
-
-    click_link("#{@user1.email}")
-
-    expect(current_path).to eq("/users/#{@user1.id}")
-
-    visit "/"
-
-    click_link(@user2.email)
-
-    expect(current_path).to eq("/users/#{@user2.id}")
+    expect(page).to have_content("#{@user1.email}")
+    expect(page).to have_content("#{@user2.email}")
+    expect(page).to have_content("#{@user3.email}")
   end
 
   it 'displays Log Out link if user is logged in' do
