@@ -28,4 +28,12 @@ RSpec.describe 'User dashboard page', type: :feature do
 
     expect(page).to have_content("List of Viewing Parties")
   end
+
+  it 'redirects to login page if user is not logged in' do
+    visit "/users/#{@user1.id}"
+
+    expect(page).to have_content("You must be logged or registered to access this page.")
+
+    expect(current_path).to eq("/login")
+  end
 end

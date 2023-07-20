@@ -32,6 +32,16 @@ class UsersController < ApplicationController
     end
   end
 
+  def dashboard
+    if session[:user_id]
+      user = User.find(session[:user_id])
+      redirect_to user_path(user)
+    else
+      flash[:error] = "You must be logged or registered to access this page."
+      redirect_to root_path
+    end
+  end
+
   private
 
   def user_params
