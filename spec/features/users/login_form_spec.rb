@@ -15,7 +15,7 @@ RSpec.describe 'Log in' do
     fill_in 'Email:', with: user.email
     fill_in :password, with: user.password
 
-    click_on 'Log In'
+    click_on 'Login'
 
     expect(current_path).to eq(user_path(user))
   end
@@ -28,7 +28,7 @@ RSpec.describe 'Log in' do
     fill_in :email, with: user1.email
     fill_in :password, with: "incorrect password"
 
-    click_on "Log In"
+    click_on "Login"
 
     expect(current_path).to eq(login_path)
 

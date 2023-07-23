@@ -14,6 +14,16 @@ RSpec.describe 'User dashboard page', type: :feature do
   end
 
   it 'displays a button to discover movies' do
+
+    visit root_path
+
+    click_on "Log In"
+
+    fill_in :email, with: @user1.email
+    fill_in :password, with: @user1.password
+
+    click_on "Login"
+
     visit "/users/#{@user1.id}"
 
     expect(page).to have_button("Discover Movies")
@@ -30,6 +40,11 @@ RSpec.describe 'User dashboard page', type: :feature do
   end
 
   it 'redirects to login page if user is not logged in' do
+
+    visit "/users/#{@user1.id}"
+save_and_open_page
+    click_on "Log Out"
+
     visit "/users/#{@user1.id}"
 
     expect(page).to have_content("You must be logged or registered to access this page.")

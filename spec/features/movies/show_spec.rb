@@ -8,6 +8,16 @@ RSpec.describe 'Movie Show Page' do
   describe "top rated movies" do
     it 'redirects and displays movie title and vote average after clicking Find Top Rated Movies', :vcr do
       movies = MovieFacade.new.top_rated
+
+      visit root_path
+
+      click_on "Log In"
+
+      fill_in :email, with: @user1.email
+      fill_in :password, with: @user1.password
+
+      click_on "Login"
+
       visit "/users/#{@user1.id}/discover"
 
       click_button("Find Top Rated Movies")
@@ -22,8 +32,18 @@ RSpec.describe 'Movie Show Page' do
   end
   describe "search movies" do
     it 'redirects and displays movie title and vote average after clicking Find Movies', :vcr do
-      visit "/users/#{@user1.id}/discover"
       movies = MovieFacade.new.search("The Matrix")
+
+      visit root_path
+
+      click_on "Log In"
+
+      fill_in :email, with: @user1.email
+      fill_in :password, with: @user1.password
+
+      click_on "Login"
+
+      visit "/users/#{@user1.id}/discover"
 
       fill_in "search", with: "The Matrix"
 
@@ -52,6 +72,16 @@ RSpec.describe 'Movie Show Page' do
 
     it 'displays a button to return to discover page', :vcr do
       movies = MovieFacade.new.top_rated
+
+      visit root_path
+
+      click_on "Log In"
+
+      fill_in :email, with: @user1.email
+      fill_in :password, with: @user1.password
+
+      click_on "Login"
+
       visit "/users/#{@user1.id}/movies/#{movies.first.id}"
 
       expect(page).to have_button("Discover Movies")

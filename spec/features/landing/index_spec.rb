@@ -2,9 +2,9 @@ require 'rails_helper'
 
 RSpec.describe "landing page", type: :feature do
   before :each do
-    @user1 = User.create!(user_name: "Bob", email: "bob@gmail.com", password: "password")
-    @user2 = User.create!(user_name: "Sally", email: "sally@gmail.com", password: "password")
-    @user3 = User.create!(user_name: "Joe", email: "joe@gmail.com", password: "password")
+    @user1 = User.create!(user_name: "Bob", email: "bob@gmail.com", password: "password", password_confirmation: "password")
+    @user2 = User.create!(user_name: "Sally", email: "sally@gmail.com", password: "password", password_confirmation: "password")
+    @user3 = User.create!(user_name: "Joe", email: "joe@gmail.com", password: "password", password_confirmation: "password")
     visit "/"
   end
 
@@ -30,7 +30,7 @@ RSpec.describe "landing page", type: :feature do
   end
 
   it 'displays existing user email addresses' do
-    user = User.create!(user_name: "Steve", email: "steve@gmail.com", password: "password")
+    user = User.create!(user_name: "Steve", email: "steve@gmail.com", password: "password", password_confirmation: "password")
     
     visit root_path
 
@@ -49,7 +49,7 @@ RSpec.describe "landing page", type: :feature do
   end
 
   it 'displays Log Out link if user is logged in' do
-    user = User.create!(user_name: "Steve", email: "steve@gmail.com", password: "password")
+    user = User.create!(user_name: "Steve", email: "steve@gmail.com", password: "password", password_confirmation: "password")  
 
     visit root_path
     click_on "Log In"
