@@ -12,7 +12,7 @@ RSpec.describe 'User dashboard page', type: :feature do
 
     fill_in :email, with: @user1.email
     fill_in :password, with: @user1.password
-save_and_open_page
+
     click_on "Login"
 
     expect(page).to have_content("#{@user1.user_name}'s Dashboard")
