@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   def new
-
+    
   end
 
   def show
@@ -39,7 +39,7 @@ class UsersController < ApplicationController
       redirect_to user_path(user)
     else
       flash[:error] = "You must be logged or registered to access this page."
-      redirect_to root_path
+      redirect_to login_path
     end
   end
 
