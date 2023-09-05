@@ -1,23 +1,16 @@
 class UsersController < ApplicationController
 
   def new
-
+    
   end
 
   def show
     @user = User.find(params[:id])
-    if session[:user_id]
-      current_user = User.find(session[:user_id])
-      redirect_to user_path(current_user)
-    else
-      flash[:error] = "You must be logged or registered to access this page."
-      redirect_to login_path
-    end
   end
 
   def create
     user = User.new(user_params)
-    if user.password == user.password_confirmation && user.save
+    if user.save
       redirect_to user_path(user)
     else
       flash[:alert] = "User can not be created. Please try again."
@@ -30,7 +23,7 @@ class UsersController < ApplicationController
 
   def login_user
     user = User.find_by(email: params[:email])
-    if user.authenticate(params[:password])
+    if user && user.authenticate(params[:password])
       session[:user_id] = user.id
       flash[:success] = "Welcome, #{user.user_name}!"
       redirect_to user_path(user)
@@ -46,7 +39,7 @@ class UsersController < ApplicationController
       redirect_to user_path(user)
     else
       flash[:error] = "You must be logged or registered to access this page."
-      redirect_to root_path
+      redirect_to login_path
     end
   end
 
