@@ -6,11 +6,18 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    if session[:user_id]
+      current_user = User.find(session[:user_id])
+      redirect_to user_path(current_user)
+    else
+      flash[:error] = "You must be logged or registered to access this page."
+      redirect_to login_path
+    end
   end
 
   def create
     user = User.new(user_params)
-    if user.save
+    if user.password == user.password_confirmation && user.save
       redirect_to user_path(user)
     else
       flash[:alert] = "User can not be created. Please try again."
