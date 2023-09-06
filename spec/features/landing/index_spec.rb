@@ -22,9 +22,9 @@ RSpec.describe "landing page", type: :feature do
   end
 
   it 'displays button to register as a new user' do
-    expect(page).to have_button("Create a New User")
+    expect(page).to have_link("Create a New User")
 
-    click_button("Create a New User")
+    click_link("Create a New User")
 
     expect(current_path).to eq("/register")
   end
@@ -78,5 +78,14 @@ RSpec.describe "landing page", type: :feature do
     expect(page).to have_content("Create a New User")
 
     expect(page).to_not have_content("Existing Users")
+  end
+
+  it "visitor redirected to landing page when trying to access user dashboard" do
+    visit root_path
+
+    visit dashboard_path
+
+    expect(current_path).to eq(root_path)
+    expect(page).to have_content("You must be logged in or registered to access this page.")
   end
 end

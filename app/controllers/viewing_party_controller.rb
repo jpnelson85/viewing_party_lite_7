@@ -1,4 +1,5 @@
 class ViewingPartyController < ApplicationController
+  before_action :require_login, only: [:new]
 
   def new
     @user = User.find(params[:user_id])

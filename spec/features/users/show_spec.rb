@@ -15,6 +15,7 @@ RSpec.describe 'User dashboard page', type: :feature do
 
     click_on "Login"
 
+    visit "/users/#{@user1.id}"
     expect(page).to have_content("#{@user1.user_name}'s Dashboard")
   end
 
@@ -26,6 +27,8 @@ RSpec.describe 'User dashboard page', type: :feature do
     fill_in :password, with: @user1.password
 
     click_on "Login"
+
+    visit "/users/#{@user1.id}"
 
     expect(page).to have_button("Discover Movies")
     expect(page).to have_content("List of Viewing Parties")

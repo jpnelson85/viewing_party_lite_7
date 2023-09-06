@@ -61,6 +61,15 @@ RSpec.describe 'Movie Show Page' do
   describe "movie detail page" do
     it 'displays a button to create a viewing party', :vcr do
       movies = MovieFacade.new.top_rated
+      
+      visit root_path
+      click_on "Log In"
+
+      fill_in :email, with: @user1.email
+      fill_in :password, with: @user1.password
+
+      click_on "Login"
+
       visit "/users/#{@user1.id}/movies/#{movies.first.id}"
 
       expect(page).to have_button("Create Viewing Party")
@@ -110,5 +119,4 @@ RSpec.describe 'Movie Show Page' do
       expect(page).to have_content(reviews.first.rating)
     end
   end
-
 end

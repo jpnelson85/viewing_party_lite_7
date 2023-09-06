@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
 
   def require_login
     unless session[:user_id]
-      flash[:alert] = "You must be logged or registered to access this page."
+      flash[:alert] = "You must be logged in or registered to access this page."
       redirect_to root_path
     end
   end

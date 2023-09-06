@@ -1,10 +1,5 @@
-<section style="text-align:center">
-<%= button_to "Create a New User", register_path, method: :get, local: true %>
-</section>
 
 <% if session[:user_id] %>
-  
-
 <ul>
   <h2>Existing Users</h2>
     <% @users.each do |user| %>

@@ -7,8 +7,16 @@ RSpec.describe "New Viewing Party Page", type: :feature do
       user2 = User.create!(user_name:"Steve", email:"Steve@email.com", password:"password")
       user3 = User.create!(user_name:"Joe", email:"Joe@email.com", password:"password")
       user4 = User.create!(user_name:"Jane", email:"Jane@email.com", password:"password")
-
       movie = MovieFacade.new.find_movie(11)
+
+      visit root_path
+      click_on "Log In"
+
+      fill_in :email, with: user1.email
+      fill_in :password, with: user1.password
+
+      click_on "Login"
+
       visit new_user_movie_viewing_party_path(user1, movie.id)
       expect(page).to have_content("Create a Movie Party for #{movie.title}")
       expect(page).to have_button("Discover Movies")
@@ -31,6 +39,15 @@ RSpec.describe "New Viewing Party Page", type: :feature do
       user2 = User.create!(user_name:"Steve", email:"Steve@email.com", password:"password")
       user3 = User.create!(user_name:"Joe", email:"Joe@email.com", password:"password")
       movie = MovieFacade.new.find_movie(11)
+
+      visit root_path
+      click_on "Log In"
+
+      fill_in :email, with: user1.email
+      fill_in :password, with: user1.password
+
+      click_on "Login"
+
       visit new_user_movie_viewing_party_path(user1, movie.id)
 
       expect(find_field(:duration).value.to_i).to eq(movie.runtime)
@@ -52,6 +69,15 @@ RSpec.describe "New Viewing Party Page", type: :feature do
       user2 = User.create!(user_name:"Steve", email:"Steve@email.com", password:"password")
       user3 = User.create!(user_name:"Joe", email:"Joe@email.com", password:"password")
       movie = MovieFacade.new.find_movie(11)
+
+      visit root_path
+      click_on "Log In"
+
+      fill_in :email, with: user1.email
+      fill_in :password, with: user1.password
+
+      click_on "Login"
+
       visit new_user_movie_viewing_party_path(user1, movie.id)
 
       fill_in :duration, with: 120
@@ -61,6 +87,20 @@ RSpec.describe "New Viewing Party Page", type: :feature do
 
       expect(current_path).to eq(new_user_movie_viewing_party_path(user1, movie.id))
       expect(page).to have_content("Please fill in all fields")
+    end
+  end
+
+  describe "sad path" do
+    it "can't access new viewing party page if not logged in", :vcr do
+      user1 = User.create!(user_name:"Callie", email:"Cal@email.com", password:"password")
+      user2 = User.create!(user_name:"Steve", email:"Steve@email.com", password:"password")
+      user3 = User.create!(user_name:"Joe", email:"Joe@email.com", password:"password")
+      movie = MovieFacade.new.find_movie(11)
+
+      visit new_user_movie_viewing_party_path(user1, movie.id)
+
+      expect(current_path).to eq(root_path)
+      expect(page).to have_content("You must be logged in or registered to access this page.")
     end
   end
 end

@@ -18,7 +18,45 @@ RSpec.describe 'Log in' do
 
       click_on 'Login'
 
-      expect(current_path).to eq(user_path(user))
+      expect(current_path).to eq(root_path)
+    end
+
+    it "displays Log Out link if user is logged in" do
+      user1 = User.create!(user_name: "Steve", email: "steve@gmail.com", password: "password", password_confirmation: "password")
+    
+      visit login_path
+
+      fill_in :email, with: user1.email
+      fill_in :password, with: user1.password
+
+      expect(page).to have_link("Log In")
+      expect(page).to have_link("Create a New User")
+      expect(page).to_not have_link("Log Out")
+
+      click_on "Login"
+
+      expect(current_path).to eq(root_path)
+      expect(page).to have_link("Log Out")
+      expect(page).to_not have_link("Log In")
+      expect(page).to_not have_link("Create a New User")
+    end
+
+    it "displays landing page if user clicks log out link" do
+      user1 = User.create!(user_name: "Steve", email: "steve@gmail.com", password: "password", password_confirmation: "password")
+    
+      visit login_path
+
+      fill_in :email, with: user1.email
+      fill_in :password, with: user1.password
+
+      click_on "Login"
+
+      click_on "Log Out"
+
+      expect(current_path).to eq(root_path)
+      expect(page).to have_link("Log In")
+      expect(page).to have_link("Create a New User")
+      expect(page).to_not have_link("Log Out")
     end
   end
 

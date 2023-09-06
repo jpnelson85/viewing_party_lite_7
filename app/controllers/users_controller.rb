@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :require_login, only: [:dashboard]
 
   def new
     
@@ -26,7 +27,7 @@ class UsersController < ApplicationController
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
       flash[:success] = "Welcome, #{user.user_name}!"
-      redirect_to user_path(user)
+      redirect_to root_path
     else
       flash[:error] = "Sorry, your credentials are bad."
       render :login_form
@@ -38,8 +39,8 @@ class UsersController < ApplicationController
       user = User.find(session[:user_id])
       redirect_to user_path(user)
     else
-      flash[:error] = "You must be logged or registered to access this page."
-      redirect_to login_path
+      flash[:error] = "You must be logged in or registered to access this page."
+      redirect_to root_path
     end
   end
 
