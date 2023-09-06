@@ -17,7 +17,7 @@ RSpec.describe "New Viewing Party Page", type: :feature do
 
       click_on "Login"
 
-      visit new_user_movie_viewing_party_path(user1, movie.id)
+      visit "/movies/#{movie.id}/viewing_party/new"
       expect(page).to have_content("Create a Movie Party for #{movie.title}")
       expect(page).to have_button("Discover Movies")
 
@@ -48,7 +48,7 @@ RSpec.describe "New Viewing Party Page", type: :feature do
 
       click_on "Login"
 
-      visit new_user_movie_viewing_party_path(user1, movie.id)
+      visit "/movies/#{movie.id}/viewing_party/new"
 
       expect(find_field(:duration).value.to_i).to eq(movie.runtime)
       expect(find_field(:host).value).to eq(user1.email)
@@ -59,7 +59,7 @@ RSpec.describe "New Viewing Party Page", type: :feature do
       check user2.email
       click_button 'Create Party'
 
-      expect(current_path).to eq("/users/#{user1.id}")
+      expect(current_path).to eq("/dashboard")
       expect(page).to have_content(movie.title)
       expect(page).to have_content("#{user2.user_name}")
     end
@@ -78,14 +78,14 @@ RSpec.describe "New Viewing Party Page", type: :feature do
 
       click_on "Login"
 
-      visit new_user_movie_viewing_party_path(user1, movie.id)
+      visit "/movies/#{movie.id}/viewing_party/new"
 
       fill_in :duration, with: 120
       fill_in :start_time, with: '12:00'
       check user2.email
       click_button 'Create Party'
 
-      expect(current_path).to eq(new_user_movie_viewing_party_path(user1, movie.id))
+      expect(current_path).to eq(new_movie_viewing_party_path(movie.id))
       expect(page).to have_content("Please fill in all fields")
     end
   end
@@ -97,7 +97,7 @@ RSpec.describe "New Viewing Party Page", type: :feature do
       user3 = User.create!(user_name:"Joe", email:"Joe@email.com", password:"password")
       movie = MovieFacade.new.find_movie(11)
 
-      visit new_user_movie_viewing_party_path(user1, movie.id)
+      visit "/movies/#{movie.id}/viewing_party/new"
 
       expect(current_path).to eq(root_path)
       expect(page).to have_content("You must be logged in or registered to access this page.")

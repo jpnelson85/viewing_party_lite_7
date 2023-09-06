@@ -18,16 +18,16 @@ RSpec.describe 'Movie Show Page' do
 
       click_on "Login"
 
-      visit "/users/#{@user1.id}/discover"
+      visit "/discover"
 
       click_button("Find Top Rated Movies")
 
-      expect(current_path).to eq("/users/#{@user1.id}/movies")
+      expect(current_path).to eq("/movies")
       expect(page).to have_link("The Shawshank Redemption")
 
       click_link("#{movies.first.title}")
 
-      expect(current_path).to eq("/users/#{@user1.id}/movies/#{movies.first.id}")
+      expect(current_path).to eq("/movies/#{movies.first.id}")
     end
   end
   describe "search movies" do
@@ -43,18 +43,18 @@ RSpec.describe 'Movie Show Page' do
 
       click_on "Login"
 
-      visit "/users/#{@user1.id}/discover"
+      visit "/discover"
 
       fill_in "search", with: "The Matrix"
 
       click_button("Find Movies")
 
-      expect(current_path).to eq("/users/#{@user1.id}/movies")
+      expect(current_path).to eq("/movies")
       expect(page).to have_link("The Matrix")
 
       click_link("#{movies.first.title}")
 
-      expect(current_path).to eq("/users/#{@user1.id}/movies/#{movies.first.id}")
+      expect(current_path).to eq("/movies/#{movies.first.id}")
     end
   end
 
@@ -70,13 +70,13 @@ RSpec.describe 'Movie Show Page' do
 
       click_on "Login"
 
-      visit "/users/#{@user1.id}/movies/#{movies.first.id}"
+      visit "/movies/#{movies.first.id}"
 
       expect(page).to have_button("Create Viewing Party")
 
       click_button("Create Viewing Party")
 
-      expect(current_path).to eq("/users/#{@user1.id}/movies/#{movies.first.id}/viewing_party/new")
+      expect(current_path).to eq("/movies/#{movies.first.id}/viewing_party/new")
     end
 
     it 'displays a button to return to discover page', :vcr do
@@ -91,20 +91,20 @@ RSpec.describe 'Movie Show Page' do
 
       click_on "Login"
 
-      visit "/users/#{@user1.id}/movies/#{movies.first.id}"
+      visit "/movies/#{movies.first.id}"
 
       expect(page).to have_button("Discover Movies")
 
       click_button("Discover Movies")
 
-      expect(current_path).to eq("/users/#{@user1.id}/discover")
+      expect(current_path).to eq("/discover")
     end
 
     it 'displays movie title, vote average, runtime, genre, summary, cast(10), count of reviews, and reviews(author name and info)', :vcr do
       movies = MovieFacade.new.top_rated
       reviews = MovieFacade.new.reviews(movies.first.id)
       cast = MovieFacade.new.cast(movies.first.id)
-      visit "/users/#{@user1.id}/movies/#{movies.first.id}"
+      visit "/movies/#{movies.first.id}"
 
       expect(page).to have_content(movies.first.title)
       expect(page).to have_content(movies.first.vote_average)

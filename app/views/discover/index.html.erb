@@ -1,8 +1,8 @@
 <%= "#{@user.user_name}'s Discover Movie Page" %>
 
-<%= button_to "Find Top Rated Movies", user_movies_path(@user), method: :get, params: { q: "top%20rated" } %>
+<%= button_to "Find Top Rated Movies", movies_path, method: :get, params: { q: "top%20rated" } %>
 
-<%= form_with url: user_movies_path(@user), method: :get do |f| %>
+<%= form_with url: movies_path, method: :get do |f| %>
   <%= f.search_field :search %>
   <%= f.submit "Find Movies" %>
 <% end %>

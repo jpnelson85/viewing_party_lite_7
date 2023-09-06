@@ -14,12 +14,12 @@ RSpec.describe "Discover Movie Page", tupe: :feature do
 
       click_on "Login"
 
-      visit "/users/#{user_1.id}/discover"
+      visit discover_index_path
       
       expect(page).to have_button("Find Top Rated Movies")
 
       click_button "Find Top Rated Movies"
-      expect(current_path).to eq(user_movies_path(user_1))
+      expect(current_path).to eq(movies_path)
     end
 
     it "displays a search bar to find movies with a keyword", :vcr do
@@ -34,13 +34,13 @@ RSpec.describe "Discover Movie Page", tupe: :feature do
 
       click_on "Login"
 
-      visit "/users/#{user_1.id}/discover"
+      visit discover_index_path
       expect(page).to have_field("search")
       expect(page).to have_button("Find Movies")
 
       fill_in "search", with: "Batman"
       click_on "Find Movies"
-      expect(current_path).to eq(user_movies_path(user_1))
+      expect(current_path).to eq(movies_path)
     end
   end
 end

@@ -15,7 +15,7 @@ RSpec.describe 'User dashboard page', type: :feature do
 
     click_on "Login"
 
-    visit "/users/#{@user1.id}"
+    visit "/dashboard"
     expect(page).to have_content("#{@user1.user_name}'s Dashboard")
   end
 
@@ -28,13 +28,13 @@ RSpec.describe 'User dashboard page', type: :feature do
 
     click_on "Login"
 
-    visit "/users/#{@user1.id}"
+    visit "/dashboard"
 
     expect(page).to have_button("Discover Movies")
     expect(page).to have_content("List of Viewing Parties")
     
     click_button("Discover Movies")
 
-    expect(current_path).to eq("/users/#{@user1.id}/discover")
+    expect(current_path).to eq("/discover")
   end
 end

@@ -21,7 +21,7 @@ RSpec.describe "User Registration form" do
       fill_in :password_confirmation, with: "password"
       click_button "Create New User"
 
-      expect(current_path).to eq(user_path(User.last))
+      expect(current_path).to eq(root_path)
     end
 
     it "creates a new user" do
@@ -41,7 +41,7 @@ RSpec.describe "User Registration form" do
 
       click_button "Create New User"
 
-      expect(current_path).to eq(user_path(User.last))
+      expect(current_path).to eq(root_path)
     end
   end
 

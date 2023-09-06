@@ -14,20 +14,10 @@ Rails.application.routes.draw do
 
   delete "/logout", to: "sessions#destroy", as: :logout
 
-  get "/dashboard", to: "users#dashboard"
+  get "/dashboard", to: "users#show"
 
-  # get "/users/", to: "users#show"
-  # get "/users/discover", to: "discover#index"
-  # get "/users/movies", to: "movies#index"
-  # get "/users/movies/:id", to: "movies#show"
-  # get "/users/movies/:id/viewing_party/new", to: "viewing_party#new"
-  # post "/users/movies/:id/viewing_party", to: "viewing_party#create
-
-  resources :users, only: [:show] do
-    resources :discover, only: [:index]
-    resources :movies, only: [:index, :show] do
-      resources :viewing_party, only: [:new, :create]
-    end
+  resources :discover, only: [:index]
+  resources :movies, only: [:index, :show] do
+    resources :viewing_party, only: [:new, :create]
   end
-
 end

@@ -25,36 +25,36 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Wed, 19 Jul 2023 21:28:52 GMT
+      - Wed, 06 Sep 2023 17:59:35 GMT
       Server:
       - openresty
       Cache-Control:
-      - public, max-age=24353
+      - public, max-age=26496
       X-Memc:
       - HIT
       X-Memc-Key:
       - a3dde13b574bdd203b706f79c6da42d3
       X-Memc-Age:
-      - '7933'
+      - '21962'
       X-Memc-Expires:
-      - '16012'
+      - '6353'
       Etag:
-      - W/"0d395577e15bbe1541f9a285623105c2"
+      - W/"d34a8258e0d67c397192aef2030e7e7b"
       Vary:
       - Accept-Encoding
       - Origin
       X-Cache:
       - Hit from cloudfront
       Via:
-      - 1.1 51e6f466f192ce588105b138cebcc0d0.cloudfront.net (CloudFront)
+      - 1.1 433684ff3df4bd5c49774dbbbd091e72.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
-      - ORD58-P1
+      - ORD51-C4
       Alt-Svc:
       - h3=":443"; ma=86400
       X-Amz-Cf-Id:
-      - a9tx1sUbtsEI3b8-RhbFLgdzP7pcxkX99aBdjoeBX5HcHTLbkJj6KA==
+      - BaxnTmdMpaeq8j2OcmdIssGXM1AVBg1BNMd0Lkz6Dvqjsv5hNUBsAg==
       Age:
-      - '5'
+      - '14905'
     body:
       encoding: ASCII-8BIT
       string: '{"adult":false,"backdrop_path":"/zqkmTXzjkAgXmEWLRsY4UpTWCeo.jpg","belongs_to_collection":{"id":10,"name":"Star
@@ -64,12 +64,12 @@ http_interactions:
         forces in their effort to take over the galactic Empire. Venturesome Luke
         Skywalker and dashing captain Han Solo team together with the loveable robot
         duo R2-D2 and C-3PO to rescue the beautiful princess and restore peace and
-        justice in the Empire.","popularity":86.497,"poster_path":"/6FfCtAuVAW8XJjZ7eWeLibRLWTw.jpg","production_companies":[{"id":1,"logo_path":"/o86DbpburjxrqAzEDhXZcyE8pDb.png","name":"Lucasfilm
+        justice in the Empire.","popularity":68.709,"poster_path":"/6FfCtAuVAW8XJjZ7eWeLibRLWTw.jpg","production_companies":[{"id":1,"logo_path":"/o86DbpburjxrqAzEDhXZcyE8pDb.png","name":"Lucasfilm
         Ltd.","origin_country":"US"},{"id":25,"logo_path":"/qZCc1lty5FzX30aOCVRBLzaVmcp.png","name":"20th
         Century Fox","origin_country":"US"}],"production_countries":[{"iso_3166_1":"US","name":"United
         States of America"}],"release_date":"1977-05-25","revenue":775398007,"runtime":121,"spoken_languages":[{"english_name":"English","iso_639_1":"en","name":"English"}],"status":"Released","tagline":"A
-        long time ago in a galaxy far, far away...","title":"Star Wars","video":false,"vote_average":8.2,"vote_count":18884}'
-  recorded_at: Wed, 19 Jul 2023 21:28:57 GMT
+        long time ago in a galaxy far, far away...","title":"Star Wars","video":false,"vote_average":8.2,"vote_count":19076}'
+  recorded_at: Wed, 06 Sep 2023 22:08:00 GMT
 - request:
     method: get
     uri: https://api.themoviedb.org/3/movie/11?api_key=972b6f94cd2b25b1d64607afa76aa0e7
@@ -95,36 +95,36 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Wed, 19 Jul 2023 21:28:52 GMT
+      - Wed, 06 Sep 2023 17:59:35 GMT
       Server:
       - openresty
       Cache-Control:
-      - public, max-age=24353
+      - public, max-age=26496
       X-Memc:
       - HIT
       X-Memc-Key:
       - a3dde13b574bdd203b706f79c6da42d3
       X-Memc-Age:
-      - '7933'
+      - '21962'
       X-Memc-Expires:
-      - '16012'
+      - '6353'
       Etag:
-      - W/"0d395577e15bbe1541f9a285623105c2"
+      - W/"d34a8258e0d67c397192aef2030e7e7b"
       Vary:
       - Accept-Encoding
       - Origin
       X-Cache:
       - Hit from cloudfront
       Via:
-      - 1.1 4716bcbdc4e9f27ba0fec4fee66dbffa.cloudfront.net (CloudFront)
+      - 1.1 43684cbde7a46ef5524f47bc4254eff8.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
-      - ORD58-P1
+      - ORD51-C4
       Alt-Svc:
       - h3=":443"; ma=86400
       X-Amz-Cf-Id:
-      - 2lAYB3PMivprol6FlQ8fTEsjfG3lMl1P-0sfTjiAmv6L9pShbaIIhA==
+      - 6aNTjAhnW7iPpi_s-LgCJj1FGdrIYBu52mIUQji-2mzbWO8elP8deQ==
       Age:
-      - '5'
+      - '14905'
     body:
       encoding: ASCII-8BIT
       string: '{"adult":false,"backdrop_path":"/zqkmTXzjkAgXmEWLRsY4UpTWCeo.jpg","belongs_to_collection":{"id":10,"name":"Star
@@ -134,12 +134,12 @@ http_interactions:
         forces in their effort to take over the galactic Empire. Venturesome Luke
         Skywalker and dashing captain Han Solo team together with the loveable robot
         duo R2-D2 and C-3PO to rescue the beautiful princess and restore peace and
-        justice in the Empire.","popularity":86.497,"poster_path":"/6FfCtAuVAW8XJjZ7eWeLibRLWTw.jpg","production_companies":[{"id":1,"logo_path":"/o86DbpburjxrqAzEDhXZcyE8pDb.png","name":"Lucasfilm
+        justice in the Empire.","popularity":68.709,"poster_path":"/6FfCtAuVAW8XJjZ7eWeLibRLWTw.jpg","production_companies":[{"id":1,"logo_path":"/o86DbpburjxrqAzEDhXZcyE8pDb.png","name":"Lucasfilm
         Ltd.","origin_country":"US"},{"id":25,"logo_path":"/qZCc1lty5FzX30aOCVRBLzaVmcp.png","name":"20th
         Century Fox","origin_country":"US"}],"production_countries":[{"iso_3166_1":"US","name":"United
         States of America"}],"release_date":"1977-05-25","revenue":775398007,"runtime":121,"spoken_languages":[{"english_name":"English","iso_639_1":"en","name":"English"}],"status":"Released","tagline":"A
-        long time ago in a galaxy far, far away...","title":"Star Wars","video":false,"vote_average":8.2,"vote_count":18884}'
-  recorded_at: Wed, 19 Jul 2023 21:28:57 GMT
+        long time ago in a galaxy far, far away...","title":"Star Wars","video":false,"vote_average":8.2,"vote_count":19076}'
+  recorded_at: Wed, 06 Sep 2023 22:08:00 GMT
 - request:
     method: get
     uri: https://api.themoviedb.org/3/movie/11?api_key=972b6f94cd2b25b1d64607afa76aa0e7
@@ -165,36 +165,36 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Wed, 19 Jul 2023 21:28:52 GMT
+      - Wed, 06 Sep 2023 17:59:35 GMT
       Server:
       - openresty
       Cache-Control:
-      - public, max-age=24353
+      - public, max-age=26496
       X-Memc:
       - HIT
       X-Memc-Key:
       - a3dde13b574bdd203b706f79c6da42d3
       X-Memc-Age:
-      - '7933'
+      - '21962'
       X-Memc-Expires:
-      - '16012'
+      - '6353'
       Etag:
-      - W/"0d395577e15bbe1541f9a285623105c2"
+      - W/"d34a8258e0d67c397192aef2030e7e7b"
       Vary:
       - Accept-Encoding
       - Origin
       X-Cache:
       - Hit from cloudfront
       Via:
-      - 1.1 51e6f466f192ce588105b138cebcc0d0.cloudfront.net (CloudFront)
+      - 1.1 0beec9c14591ff0bf6e1fa7c92617b52.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
-      - ORD58-P1
+      - ORD51-C4
       Alt-Svc:
       - h3=":443"; ma=86400
       X-Amz-Cf-Id:
-      - ocemnUhv2XOuPnw5FwZbvRaOmazktHFg1fN2R6KnkWP8_SMDNaA5xw==
+      - ubCIXi_AzkHI8nmm-6jLjsbDpEddJofYBtFm-CELDbApYD44tHfr-A==
       Age:
-      - '5'
+      - '14906'
     body:
       encoding: ASCII-8BIT
       string: '{"adult":false,"backdrop_path":"/zqkmTXzjkAgXmEWLRsY4UpTWCeo.jpg","belongs_to_collection":{"id":10,"name":"Star
@@ -204,12 +204,12 @@ http_interactions:
         forces in their effort to take over the galactic Empire. Venturesome Luke
         Skywalker and dashing captain Han Solo team together with the loveable robot
         duo R2-D2 and C-3PO to rescue the beautiful princess and restore peace and
-        justice in the Empire.","popularity":86.497,"poster_path":"/6FfCtAuVAW8XJjZ7eWeLibRLWTw.jpg","production_companies":[{"id":1,"logo_path":"/o86DbpburjxrqAzEDhXZcyE8pDb.png","name":"Lucasfilm
+        justice in the Empire.","popularity":68.709,"poster_path":"/6FfCtAuVAW8XJjZ7eWeLibRLWTw.jpg","production_companies":[{"id":1,"logo_path":"/o86DbpburjxrqAzEDhXZcyE8pDb.png","name":"Lucasfilm
         Ltd.","origin_country":"US"},{"id":25,"logo_path":"/qZCc1lty5FzX30aOCVRBLzaVmcp.png","name":"20th
         Century Fox","origin_country":"US"}],"production_countries":[{"iso_3166_1":"US","name":"United
         States of America"}],"release_date":"1977-05-25","revenue":775398007,"runtime":121,"spoken_languages":[{"english_name":"English","iso_639_1":"en","name":"English"}],"status":"Released","tagline":"A
-        long time ago in a galaxy far, far away...","title":"Star Wars","video":false,"vote_average":8.2,"vote_count":18884}'
-  recorded_at: Wed, 19 Jul 2023 21:28:57 GMT
+        long time ago in a galaxy far, far away...","title":"Star Wars","video":false,"vote_average":8.2,"vote_count":19076}'
+  recorded_at: Wed, 06 Sep 2023 22:08:01 GMT
 - request:
     method: get
     uri: https://api.themoviedb.org/3/movie/11?api_key=972b6f94cd2b25b1d64607afa76aa0e7
@@ -235,36 +235,36 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Wed, 19 Jul 2023 21:28:52 GMT
+      - Wed, 06 Sep 2023 17:59:35 GMT
       Server:
       - openresty
       Cache-Control:
-      - public, max-age=24353
+      - public, max-age=26496
       X-Memc:
       - HIT
       X-Memc-Key:
       - a3dde13b574bdd203b706f79c6da42d3
       X-Memc-Age:
-      - '7933'
+      - '21962'
       X-Memc-Expires:
-      - '16012'
+      - '6353'
       Etag:
-      - W/"0d395577e15bbe1541f9a285623105c2"
+      - W/"d34a8258e0d67c397192aef2030e7e7b"
       Vary:
       - Accept-Encoding
       - Origin
       X-Cache:
       - Hit from cloudfront
       Via:
-      - 1.1 f31fa40e0863bae8e02d0ba21cedaeb0.cloudfront.net (CloudFront)
+      - 1.1 f272f18064d81ea799c663dff05f02d8.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
-      - ORD58-P1
+      - ORD51-C4
       Alt-Svc:
       - h3=":443"; ma=86400
       X-Amz-Cf-Id:
-      - XmOwQNlH4gWtwJ-Xvs61O7HUD5-vTMjaLTwAOFqO0UBLnlzGn7J9-w==
+      - VVMb-9fSoS9ciqhiVizp2KOk3eIX8BALXED80iQO06ao_gTe5Z-cIw==
       Age:
-      - '5'
+      - '14906'
     body:
       encoding: ASCII-8BIT
       string: '{"adult":false,"backdrop_path":"/zqkmTXzjkAgXmEWLRsY4UpTWCeo.jpg","belongs_to_collection":{"id":10,"name":"Star
@@ -274,12 +274,12 @@ http_interactions:
         forces in their effort to take over the galactic Empire. Venturesome Luke
         Skywalker and dashing captain Han Solo team together with the loveable robot
         duo R2-D2 and C-3PO to rescue the beautiful princess and restore peace and
-        justice in the Empire.","popularity":86.497,"poster_path":"/6FfCtAuVAW8XJjZ7eWeLibRLWTw.jpg","production_companies":[{"id":1,"logo_path":"/o86DbpburjxrqAzEDhXZcyE8pDb.png","name":"Lucasfilm
+        justice in the Empire.","popularity":68.709,"poster_path":"/6FfCtAuVAW8XJjZ7eWeLibRLWTw.jpg","production_companies":[{"id":1,"logo_path":"/o86DbpburjxrqAzEDhXZcyE8pDb.png","name":"Lucasfilm
         Ltd.","origin_country":"US"},{"id":25,"logo_path":"/qZCc1lty5FzX30aOCVRBLzaVmcp.png","name":"20th
         Century Fox","origin_country":"US"}],"production_countries":[{"iso_3166_1":"US","name":"United
         States of America"}],"release_date":"1977-05-25","revenue":775398007,"runtime":121,"spoken_languages":[{"english_name":"English","iso_639_1":"en","name":"English"}],"status":"Released","tagline":"A
-        long time ago in a galaxy far, far away...","title":"Star Wars","video":false,"vote_average":8.2,"vote_count":18884}'
-  recorded_at: Wed, 19 Jul 2023 21:28:57 GMT
+        long time ago in a galaxy far, far away...","title":"Star Wars","video":false,"vote_average":8.2,"vote_count":19076}'
+  recorded_at: Wed, 06 Sep 2023 22:08:01 GMT
 - request:
     method: get
     uri: https://api.themoviedb.org/3/movie/11?api_key=972b6f94cd2b25b1d64607afa76aa0e7
@@ -305,36 +305,36 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Wed, 19 Jul 2023 21:28:52 GMT
+      - Wed, 06 Sep 2023 17:59:35 GMT
       Server:
       - openresty
       Cache-Control:
-      - public, max-age=24353
+      - public, max-age=26496
       X-Memc:
       - HIT
       X-Memc-Key:
       - a3dde13b574bdd203b706f79c6da42d3
       X-Memc-Age:
-      - '7933'
+      - '21962'
       X-Memc-Expires:
-      - '16012'
+      - '6353'
       Etag:
-      - W/"0d395577e15bbe1541f9a285623105c2"
+      - W/"d34a8258e0d67c397192aef2030e7e7b"
       Vary:
       - Accept-Encoding
       - Origin
       X-Cache:
       - Hit from cloudfront
       Via:
-      - 1.1 04a2159f61dab28d4b7610df116a191a.cloudfront.net (CloudFront)
+      - 1.1 4879fc9ab394c9467768d2a13b906c26.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
-      - ORD58-P1
+      - ORD51-C4
       Alt-Svc:
       - h3=":443"; ma=86400
       X-Amz-Cf-Id:
-      - QzOEH0lI3i45fZPFyTPytza-jrudSxRZHibSi_jVtlYX70wM_qa0MQ==
+      - NaVj9ED7fqXvROBHY32Cuulo8TGXCQSw_j_rl1wfQ_hjQNZKLpPDNQ==
       Age:
-      - '5'
+      - '14906'
     body:
       encoding: ASCII-8BIT
       string: '{"adult":false,"backdrop_path":"/zqkmTXzjkAgXmEWLRsY4UpTWCeo.jpg","belongs_to_collection":{"id":10,"name":"Star
@@ -344,10 +344,10 @@ http_interactions:
         forces in their effort to take over the galactic Empire. Venturesome Luke
         Skywalker and dashing captain Han Solo team together with the loveable robot
         duo R2-D2 and C-3PO to rescue the beautiful princess and restore peace and
-        justice in the Empire.","popularity":86.497,"poster_path":"/6FfCtAuVAW8XJjZ7eWeLibRLWTw.jpg","production_companies":[{"id":1,"logo_path":"/o86DbpburjxrqAzEDhXZcyE8pDb.png","name":"Lucasfilm
+        justice in the Empire.","popularity":68.709,"poster_path":"/6FfCtAuVAW8XJjZ7eWeLibRLWTw.jpg","production_companies":[{"id":1,"logo_path":"/o86DbpburjxrqAzEDhXZcyE8pDb.png","name":"Lucasfilm
         Ltd.","origin_country":"US"},{"id":25,"logo_path":"/qZCc1lty5FzX30aOCVRBLzaVmcp.png","name":"20th
         Century Fox","origin_country":"US"}],"production_countries":[{"iso_3166_1":"US","name":"United
         States of America"}],"release_date":"1977-05-25","revenue":775398007,"runtime":121,"spoken_languages":[{"english_name":"English","iso_639_1":"en","name":"English"}],"status":"Released","tagline":"A
-        long time ago in a galaxy far, far away...","title":"Star Wars","video":false,"vote_average":8.2,"vote_count":18884}'
-  recorded_at: Wed, 19 Jul 2023 21:28:57 GMT
+        long time ago in a galaxy far, far away...","title":"Star Wars","video":false,"vote_average":8.2,"vote_count":19076}'
+  recorded_at: Wed, 06 Sep 2023 22:08:01 GMT
 recorded_with: VCR 6.2.0

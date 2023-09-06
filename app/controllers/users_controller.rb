@@ -1,18 +1,18 @@
 class UsersController < ApplicationController
-  before_action :require_login, only: [:dashboard]
+  before_action :require_login, only: [:dashboard, :show]
 
   def new
     
   end
 
   def show
-    @user = User.find(params[:id])
+    @user = current_user
   end
 
   def create
     user = User.new(user_params)
     if user.save
-      redirect_to user_path(user)
+      redirect_to dashboard_path
     else
       flash[:alert] = "User can not be created. Please try again."
       redirect_to "/register"
